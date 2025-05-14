@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-This project is a Todo application built using Nuxt.js v3.17.3 and TypeScript. It follows a set of standardized
-guidelines to ensure code quality, consistency, and maintainability.
+This project is a Todo application built using Nuxt.js v3.17.3 and TypeScript.
+It follows a set of standardised guidelines to ensure code quality, consistency, and maintainability.
 
 ### Features
 
@@ -18,7 +18,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 ## Language Requirements
 
 - Documentation and comments should be written in British English
-- Use British spelling for documentation and comments (e.g., "colour" instead of "color", "optimise" instead of "
+- Use British spelling for documentation and comments (e.g. "colour" instead of "color", "optimise" instead of "
   optimize")
 - Use British grammar and punctuation conventions for documentation and comments
 - All variable names, function names, class names, and other code elements should use standard English (US English)
@@ -26,7 +26,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 ## Project Management
 
 - The team uses Jira for project management
-- When referencing tickets or issues, use the Jira ticket format (e.g., PROJ-123)
+- When referencing tickets or issues, use the Jira ticket format (e.g. PROJ-123)
 
 ## Setup
 
@@ -69,29 +69,36 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 The Todo application follows a modular structure:
 
 ```
-├── assets/                      # Archivos estáticos que serán procesados
-│   └── css/                     # Estilos globales (TailwindCSS)
-├── components/                  # Componentes Vue reutilizables
-│   └── todo/                    # Componentes específicos para tareas
-│       ├── TodoItem.vue         # Componente para un ítem de tarea
-│       ├── TodoList.vue         # Componente para la lista de tareas
-│       ├── TodoForm.vue         # Formulario para crear/editar tareas
-│       └── TodoFilter.vue       # Filtros para las tareas
-├── composables/                 # Composables de Vue 3
-│   ├── useTodos.ts              # Lógica para manejar tareas
-│   └── useLocalStorage.ts       # Lógica para almacenamiento local
-├── pages/                       # Páginas de la aplicación
-│   └── index.vue                # Página principal
-├── stores/                      # Stores de Pinia
-│   └── todo.ts                  # Store para tareas
-└── types/                       # Definiciones de tipos TypeScript
-    ├── todo.ts                  # Tipos para tareas
-    └── index.ts                 # Exportaciones de tipos
+├── assets/                      # Static assets that will be processed
+│   └── css/                     # Global styles (TailwindCSS)
+│       └── main.css             # Main CSS file
+├── components/                  # Reusable Vue components
+│   └── todo/                    # Todo-specific components
+│       ├── TodoItem.vue         # Component for a single todo item
+│       ├── TodoList.vue         # Component for the list of todos
+│       ├── TodoForm.vue         # Form for creating/editing todos
+│       └── TodoFilter.vue       # Filters for todos
+├── composables/                 # Vue 3 composables
+│   └── useTodos.ts              # Logic for handling todos
+├── pages/                       # Application pages
+│   ├── index.vue                # Home page
+│   ├── about.vue                # About page
+│   └── todos/                   # Todo pages
+│       ├── index.vue            # Todos list page
+│       └── [id].vue             # Dynamic todo detail page
+├── public/                      # Static assets that will be served as-is
+├── server/                      # Server-side code
+│   └── api/                     # API endpoints
+├── stores/                      # Pinia stores
+│   └── todo.ts                  # Todo store
+└── types/                       # TypeScript type definitions
+    ├── todo.ts                  # Todo types
+    └── index.ts                 # Type exports
 ```
 
 ## IDE Configuration
 
-This project includes standardized configurations for both JetBrains IDEs and Visual Studio Code.
+This project includes standardised configurations for both JetBrains IDEs and Visual Studio Code.
 
 ### JetBrains IDEs
 
@@ -103,10 +110,10 @@ The `.idea` directory contains shared configuration files for JetBrains IDEs:
 - VCS settings
 - JavaScript library mappings
 
-These configurations are compatible across all JetBrains IDEs, ensuring that developers using different IDEs (e.g.,
+These configurations are compatible across all JetBrains IDEs, ensuring that developers using different IDEs (e.g.
 WebStorm and IntelliJ IDEA) will have the same development experience.
 
-User-specific files (workspace.xml, etc.) are ignored by Git via the `.idea/.gitignore` file.
+Git ignores user-specific files (workspace.xml, etc.) via the `.idea/.gitignore` file.
 
 ### Visual Studio Code
 
@@ -116,12 +123,11 @@ The `.vscode` directory contains shared configuration files for VS Code:
 - `extensions.json`: Recommended extensions for this project
 - `launch.json`: Debugging configurations
 
-User-specific files are ignored by Git.
+Git ignores user-specific files.
 
 ### Recommended Extensions for VS Code
 
 - Vue Language Features (Volar)
-- TypeScript Vue Plugin (Volar)
 - ESLint
 - Prettier
 - EditorConfig
@@ -136,10 +142,10 @@ User-specific files are ignored by Git.
 This project uses several development tools to ensure code quality, consistency, and maintainability:
 
 - **ESLint**: Lints JavaScript and TypeScript code
-- **Prettier**: Formats code according to project standards
+- **Prettier**: Formats code, according to project standards
 - **StyleLint**: Lints CSS, SCSS, and styles in Vue files
 - **Husky**: Manages Git hooks for pre-commit checks and commit message validation
-- **CommitLint**: Enforces conventional commit message format
+- **CommitLint**: Enforces a conventional commit message format
 
 For detailed information about these tools, their configuration, and usage, refer to the [Development Tools Guidelines](.github/instructions/development_tools.instructions.md).
 
@@ -209,13 +215,13 @@ pnpm stylelint:fix
 ### Component Structure
 
 - Always use the `<script setup lang="ts">` syntax for components
-- Prefer the Composition API over the Options API for better organization and reuse of logic
+- Prefer the Composition API over the Options API for better organisation and reuse of logic
 - Keep components small and focused on a single responsibility
 
 ### Props
 
 - Define `props` with explicit types
-- Provide validators for `props` whenever possible
+- Give validators for `props` whenever possible
 - Specify default values for optional `props`
 - Prefer `type` for defining the shape of `props`: `defineProps<{ user: UserType; count?: number }>()`
 
@@ -295,7 +301,7 @@ pnpm stylelint:fix
 - Verify that explicit and strict types are used
 - Identify any use of `any` and suggest safer alternatives
 - Confirm that `type` is preferred for defining object shapes, unions, etc.
-- Verify `interface` is reserved for specific cases such as class implementation or declaration merging
+- Verify `interface` is reserved for specific cases this as class implementation or declaration merging
 
 ### Code Quality
 
@@ -314,7 +320,7 @@ pnpm stylelint:fix
 
 ### Security
 
-- Look for potential vulnerabilities (e.g., XSS, SQL injection, if applicable to the code)
+- Look for potential vulnerabilities (e.g. XSS, SQL injection, if applicable to the code)
 
 ### Testing
 
@@ -369,20 +375,20 @@ pnpm stylelint:fix
 
 - What problem does this PR solve?
 - What was the motivation behind this change?
-- Link to any relevant issue or Trello/Jira card (e.g., "Resolves #42", "Part of T-123")
+- Link to any relevant issue or Trello/Jira card (e.g. "Resolves #42", "Part of T-123")
 
 ### Description of Changes
 
-- Summarize the main changes made
+- Summarise the main changes made
 - Highlight any important architecture or design decisions
 - Mention any new or updated dependencies
 
 ### Testing Instructions
 
-- Provide clear steps for the reviewer to test the changes
+- Give clear steps for the reviewer to test the changes
 - Include any necessary configuration or test data
 
-### Additional Considerations
+### More Considerations
 
 - Are there any breaking changes?
 - Is there any necessary follow-up task?
@@ -395,7 +401,7 @@ pnpm stylelint:fix
 - [ ] Complies with project style guides
 - [ ] Tested manually
 
-## Additional Resources
+## More Resources
 
 For more detailed information about Nuxt.js and its features, refer to the following resources:
 
