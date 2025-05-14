@@ -1,0 +1,8 @@
+# Run ESLint
+pnpm run lint
+
+# Run Prettier
+pnpm run format
+
+# Run Stylelint
+pnpm run stylelint

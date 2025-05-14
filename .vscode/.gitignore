@@ -1,0 +1,11 @@
+# User-specific VS Code settings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code directories
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix

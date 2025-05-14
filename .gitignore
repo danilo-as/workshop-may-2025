@@ -1,0 +1,26 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+# IDE configurations - specific user files are ignored in their respective .gitignore files
+# .idea - tracked for JetBrains IDE settings
+# .vscode - tracked for VS Code settings
+
+# Local env files
+.env
+.env.*
+!.env.example

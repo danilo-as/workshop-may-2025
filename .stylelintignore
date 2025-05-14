@@ -1,0 +1,22 @@
+# Nuxt build output
+.nuxt
+.output
+dist
+
+# Node modules
+node_modules
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Editor directories and files
+.idea
+.vscode
+
+# Generated files
+*.min.css
+
+# OS generated files
+.DS_Store

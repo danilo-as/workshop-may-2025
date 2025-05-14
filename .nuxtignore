@@ -1,0 +1,11 @@
+.git
+.husky
+.nuxt
+.output
+.github
+.junie
+.idea
+dist
+node_modules
+playwright
+*.spec.ts

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss",
+    "mikestead.dotenv",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag"
+  ]
+}
