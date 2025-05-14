@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This project is built using Nuxt.js and TypeScript. It follows a set of standardized guidelines to ensure code quality,
+This project is built using Nuxt.js and TypeScript.
+It follows a set of standardised guidelines to ensure code quality,
 consistency, and maintainability.
 
 > **Note:** This document provides an overview of the project guidelines. For more detailed information on specific
@@ -26,7 +27,7 @@ consistency, and maintainability.
 
 ## IDE Configuration
 
-This project includes standardized configurations for both JetBrains IDEs and Visual Studio Code.
+This project includes standardised configurations for both JetBrains IDEs and Visual Studio Code.
 
 ### JetBrains IDEs
 
@@ -49,8 +50,8 @@ The `.vscode` directory contains shared configuration files for VS Code:
 ### Recommended Extensions for VS Code
 
 - Vue Language Features (Volar)
-- TypeScript Vue Plugin (Volar)
 - ESLint
+- StyleLint
 - Prettier
 - EditorConfig
 - Tailwind CSS IntelliSense
@@ -109,13 +110,13 @@ The `.vscode` directory contains shared configuration files for VS Code:
 ### Component Structure
 
 - Always use the `<script setup lang="ts">` syntax for components
-- Prefer the Composition API over the Options API for better organization and reuse of logic
+- Prefer the Composition API over the Options API for better organisation and reuse of logic
 - Keep components small and focused on a single responsibility
 
 ### Props
 
 - Define `props` with explicit types
-- Provide validators for `props` whenever possible
+- Give validators for `props` whenever possible
 - Specify default values for optional `props`
 - Prefer `type` for defining the shape of `props`: `defineProps<{ user: UserType; count?: number }>()`
 
@@ -133,7 +134,10 @@ The `.vscode` directory contains shared configuration files for VS Code:
 ### Styling
 
 - Use `<style scoped>` by default to avoid CSS conflicts
-- Consider using CSS Modules or methodologies like BEM if the project requires it
+- Follow the BEM (Block, Element, Modifier) method for class naming
+- Use kebab-case for custom properties (CSS variables)
+- Maintain alphabetical ordering of properties for better readability
+- Ensure compatibility with Tailwind CSS
 
 ### Component Communication
 
@@ -195,7 +199,7 @@ The `.vscode` directory contains shared configuration files for VS Code:
 - Verify that explicit and strict types are used
 - Identify any use of `any` and suggest safer alternatives
 - Confirm that `type` is preferred for defining object shapes, unions, etc.
-- Verify `interface` is reserved for specific cases such as class implementation or declaration merging
+- Verify `interface` is reserved for specific cases this as class implementation or declaration merging
 
 ### Code Quality
 
@@ -214,7 +218,7 @@ The `.vscode` directory contains shared configuration files for VS Code:
 
 ### Security
 
-- Look for potential vulnerabilities (e.g., XSS, SQL injection, if applicable to the code)
+- Look for potential vulnerabilities (e.g. XSS, SQL injection, if applicable to the code)
 
 ### Testing
 
@@ -269,20 +273,20 @@ The `.vscode` directory contains shared configuration files for VS Code:
 
 - What problem does this PR solve?
 - What was the motivation behind this change?
-- Link to any relevant issue or Trello/Jira card (e.g., "Resolves #42", "Part of T-123")
+- Link to any relevant issue or Trello/Jira card (e.g. "Resolves #42", "Part of T-123")
 
 ### Description of Changes
 
-- Summarize the main changes made
+- Summarise the main changes made
 - Highlight any important architecture or design decisions
 - Mention any new or updated dependencies
 
 ### Testing Instructions
 
-- Provide clear steps for the reviewer to test the changes
+- Give clear steps for the reviewer to test the changes
 - Include any necessary configuration or test data
 
-### Additional Considerations
+### More Considerations
 
 - Are there any breaking changes?
 - Is there any necessary follow-up task?
@@ -323,3 +327,65 @@ pnpm preview
 
 For more information, refer to the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
 and [deployment documentation](https://nuxt.com/docs/getting-started/deployment).
+
+## Development Tools
+
+This project uses several development tools to ensure code quality, consistency, and maintainability.
+
+### ESLint
+
+ESLint is used for linting JavaScript and TypeScript code.
+
+- The project uses `@nuxt/eslint` which is specifically designed for Nuxt.js projects
+- ESLint is configured to work with Prettier through `eslint-config-prettier` and `eslint-plugin-prettier`
+
+```bash
+# Lint all files
+pnpm lint
+
+# Lint and fix all files
+pnpm lint:fix
+```
+
+### Prettier
+
+Prettier is used for code formatting.
+
+- Configuration is defined in `.prettierrc` and `.prettierignore` files
+- Prettier is integrated with ESLint for consistent formatting
+
+```bash
+# Format all files
+pnpm format
+```
+
+### StyleLint
+
+StyleLint is used for linting CSS, SCSS, and styles in Vue files.
+
+- Extends `stylelint-config-standard` and `stylelint-config-recommended-vue`
+- Uses plugins: `@stylistic/stylelint-plugin`, `stylelint-order`, and `stylelint-prettier`
+- Configuration is defined in `.stylelintrc.json` and `.stylelintignore` files
+
+```bash
+# Lint all style files
+pnpm stylelint
+
+# Lint and fix all style files
+pnpm stylelint:fix
+```
+
+### Husky
+
+Husky is used for Git hooks to ensure code quality before commits.
+
+- Pre-commit hook: Runs linting and formatting checks
+- Commit-msg hook: Validates commit messages using CommitLint
+
+### CommitLint
+
+CommitLint is used to enforce a conventional commit message format.
+
+- Uses `@commitlint/config-conventional` for standard rules
+- Configuration is defined in `commitlint.config.js` or through package.json
+- Integrated with Husky to validate commit messages automatically when you make a commit
