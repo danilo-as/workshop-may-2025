@@ -129,6 +129,34 @@ User-specific files are ignored by Git.
 - DotENV
 - Path Intellisense
 - Auto Rename Tag
+- StyleLint
+
+## Development Tools
+
+This project uses several development tools to ensure code quality, consistency, and maintainability:
+
+- **ESLint**: Lints JavaScript and TypeScript code
+- **Prettier**: Formats code according to project standards
+- **StyleLint**: Lints CSS, SCSS, and styles in Vue files
+- **Husky**: Manages Git hooks for pre-commit checks and commit message validation
+- **CommitLint**: Enforces conventional commit message format
+
+For detailed information about these tools, their configuration, and usage, refer to the [Development Tools Guidelines](.github/instructions/development_tools.instructions.md).
+
+### Running Development Tools
+
+```bash
+# ESLint
+pnpm lint
+pnpm lint:fix
+
+# Prettier
+pnpm format
+
+# StyleLint
+pnpm stylelint
+pnpm stylelint:fix
+```
 
 ## Coding Standards
 
