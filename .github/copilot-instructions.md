@@ -35,6 +35,22 @@ Please follow these guidelines when generating code:
 - Use the Composition API with `<script setup lang="ts">` syntax
 - Keep components small and focused on a single responsibility
 
+### CSS Styling Guidelines
+
+- Follow the CSS styling guidelines defined in [.github/instructions/css.instructions.md](instructions/css.instructions.md)
+- Use the BEM method for class naming
+- Maintain alphabetical ordering of CSS properties
+- Ensure compatibility with Tailwind CSS
+
+### Development Tools
+
+- Follow the development tools guidelines defined in [.github/instructions/development_tools.instructions.md](instructions/development_tools.instructions.md)
+- Use ESLint for linting JavaScript and TypeScript code
+- Use Prettier for code formatting
+- Use StyleLint for linting CSS, SCSS, and styles in Vue files
+- Use Husky for Git hooks to ensure code quality before commits
+- Use CommitLint to enforce conventional commit message format
+
 ### Testing Guidelines
 
 - Follow the testing guidelines defined
