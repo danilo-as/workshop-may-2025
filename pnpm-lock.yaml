@@ -12,11 +12,17 @@ importers:
         specifier: ~0.11.0
         version: 0.11.0(magicast@0.3.5)(pinia@3.0.2(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))
       '@vueuse/core':
-        specifier: ^13.1.0
+        specifier: ~13.1.0
         version: 13.1.0(vue@3.5.13(typescript@5.7.3))
       '@vueuse/nuxt':
-        specifier: ^13.1.0
+        specifier: ~13.1.0
         version: 13.1.0(magicast@0.3.5)(nuxt@3.17.3(@parcel/watcher@2.5.1)(@types/node@22.15.17)(db0@0.3.2)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(meow@13.2.0)(optionator@0.9.4)(rollup@4.40.2)(stylelint@16.19.1(typescript@5.7.3))(terser@5.39.1)(typescript@5.7.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.39.1)(yaml@2.7.1))(vue-tsc@2.2.10(typescript@5.7.3))(yaml@2.7.1))(vue@3.5.13(typescript@5.7.3))
+      decimal.js:
+        specifier: 10.5.0
+        version: 10.5.0
+      luxon:
+        specifier: 3.6.1
+        version: 3.6.1
       pinia:
         specifier: ~3.0.2
         version: 3.0.2(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
@@ -48,6 +54,9 @@ importers:
       '@stylistic/stylelint-plugin':
         specifier: ~3.1.2
         version: 3.1.2(stylelint@16.19.1(typescript@5.7.3))
+      '@types/luxon':
+        specifier: 3.6.2
+        version: 3.6.2
       autoprefixer:
         specifier: ~10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -1237,6 +1246,9 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
+  '@types/luxon@3.6.2':
+    resolution: {integrity: sha512-R/BdP7OxEMc44l2Ex5lSXHoIXTB2JLNa3y2QISIbr58U/YcsffyQrYW//hZSdrfxrjRZj3GcUoxMPGdO8gSYuw==}
+
   '@types/node@22.15.17':
     resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
 
@@ -2208,6 +2220,9 @@ packages:
 
   decache@4.6.2:
     resolution: {integrity: sha512-2LPqkLeu8XWHU8qNCS3kcF6sCcb5zIzvWaAHYSvPfwhdd7mHuah29NssMzrTYyHN4F5oFy2ko9OBYxegtU0FEw==}
+
+  decimal.js@10.5.0:
+    resolution: {integrity: sha512-8vDa8Qxvr/+d94hSh5P3IJwI5t8/c0KsMp+g8bNw9cY2icONa5aPfvKeieW1WlG0WQYwwhJ7mjui2xtiePQSXw==}
 
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -6688,6 +6703,8 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
+  '@types/luxon@3.6.2': {}
+
   '@types/node@22.15.17':
     dependencies:
       undici-types: 6.21.0
@@ -7782,6 +7799,8 @@ snapshots:
   decache@4.6.2:
     dependencies:
       callsite: 1.0.0
+
+  decimal.js@10.5.0: {}
 
   deep-is@0.1.4: {}
 
